@@ -153,8 +153,8 @@ dependencies = [
  "cargo_metadata",
  "colored",
  "glob",
- "iai-callgrind",
- "iai-callgrind-runner",
+ "iai-callgrind 0.13.1",
+ "iai-callgrind-runner 0.13.1",
  "lazy_static",
  "minijinja",
  "once_cell",
@@ -370,7 +370,7 @@ dependencies = [
  "assert_cmd",
  "cty",
  "fs_extra",
- "iai-callgrind",
+ "iai-callgrind 0.13.1",
  "lazy_static",
  "predicates",
  "regex",
@@ -731,8 +731,8 @@ dependencies = [
  "cty",
  "derive_more",
  "fs_extra",
- "iai-callgrind-macros",
- "iai-callgrind-runner",
+ "iai-callgrind-macros 0.4.0",
+ "iai-callgrind-runner 0.13.1",
  "regex",
  "rstest",
  "serde",
@@ -740,6 +740,25 @@ dependencies = [
  "serial_test",
  "strum",
  "trybuild",
+ "version-compare",
+]
+
+[[package]]
+name = "iai-callgrind"
+version = "0.13.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "19d2cec69188f0969ad40e0c14586fe0e66f630361dc7422d1f88f539494c520"
+dependencies = [
+ "bincode",
+ "bindgen",
+ "cc",
+ "cfg-if",
+ "cty",
+ "derive_more",
+ "iai-callgrind-macros 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "iai-callgrind-runner 0.13.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "regex",
+ "strum",
  "version-compare",
 ]
 
@@ -759,6 +778,21 @@ dependencies = [
 ]
 
 [[package]]
+name = "iai-callgrind-macros"
+version = "0.4.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "5320d2cc705c95e4cc82587f89e530e9fe84bb0fac8046b9ed3660384b9070dd"
+dependencies = [
+ "derive_more",
+ "proc-macro-error",
+ "proc-macro2",
+ "quote",
+ "serde",
+ "serde_json",
+ "syn 2.0.76",
+]
+
+[[package]]
 name = "iai-callgrind-runner"
 version = "0.13.1"
 dependencies = [
@@ -769,6 +803,7 @@ dependencies = [
  "colored",
  "env_logger",
  "glob",
+ "iai-callgrind 0.13.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "indexmap 2.4.0",
  "inferno",
  "lazy_static",
@@ -787,6 +822,15 @@ dependencies = [
  "tempfile",
  "version-compare",
  "which 5.0.0",
+]
+
+[[package]]
+name = "iai-callgrind-runner"
+version = "0.13.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a2e3767db80ca4b67964b8fbd9e9526eef98efacc77cb4b4e8507335a1185907"
+dependencies = [
+ "serde",
 ]
 
 [[package]]

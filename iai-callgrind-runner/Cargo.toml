@@ -71,6 +71,7 @@ shlex = { workspace = true, optional = true }
 tempfile = { workspace = true, optional = true }
 version-compare = { workspace = true, optional = true }
 which = { workspace = true, optional = true }
+iai-callgrind = { version = "0.13.1", features = ["client_requests"] }
 
 [dev-dependencies]
 pretty_assertions = { workspace = true }
@@ -92,3 +93,7 @@ name = "schema-gen"
 path = "src/schema_gen.rs"
 required-features = ["schema"]
 test = false
+
+[[bench]]
+name = "binary_example"
+harness = false
